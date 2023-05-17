@@ -28,5 +28,42 @@ int main() {
     return 0;
 }
 
+// ADD data al array iterando
+int main() {
+   // Declaración del array de enteros
+   int numeros[5];
+    //[0 ] [1 ] [2 ] [3 ] [4]
+    //[10] [55] [77] [33] [44]
+
+   // Guardar datos en el array utilizando un bucle
+   int i;
+   for (i = 0; i < 5; i++) { // FOR ( INI VAR, CONDICIONAL, INCRE O DECRE )
+       printf("Ingrese el número para la posición %d: ", i);
+       scanf("%d", &numeros[i]);
+   }
+
+   // Mostrar los datos del array
+   printf("Los números almacenados son: ");
+   for (i = 0; i < 5; i++) {
+       printf("%d ", numeros[i]);
+   }
+   printf("\n");
+    
+    // Vamos a buscar información
+    printf("INGRESA TU NUMERO A BUSCAR PARA VER SI EXISTE: ");
+    int find;
+    scanf("%d", &find);
+    
+    for (i = 0; i < 5; i++) {
+        if (find == numeros[i]) {
+            printf("ENCONTRASTE EL VALOR ENTONCES SI EXISTE.");
+            i = 5;
+        }
+    }
+
+   return 0;
+}
+
+
 
 
